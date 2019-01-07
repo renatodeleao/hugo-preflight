@@ -1,0 +1,22 @@
+{{ define "main" }}
+  <ul>
+  <li>Type: {{ .Type }}</li>
+  <li>Kind: {{ .Kind }}</li>
+  <li>Keywords: {{ .Keywords }}</li>
+  <li>Istranslated: {{ .IsTranslated }}</li>
+  <li>reading time: {{.ReadingTime}} min</li>
+  <li>Params: {{.Params}}</li>
+  <li>Summary: {{ .Summary}}</li>
+  <li>Author: {{ .Params.author }}</li>
+  </ul>
+  <hr />
+  <h1>{{ .Params.Title}}</h1>
+  <section>{{ .Content}}</section>
+
+  {{if .PrevInSection}}
+    <a href="{{.PrevInSection.Permalink}}">Prev</a>
+  {{end}}
+  {{if .NextInSection}}
+    <a href="{{.NextInSection.Permalink}}">Next</a>
+  {{end}}
+{{end}}

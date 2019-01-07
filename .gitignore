@@ -1,0 +1,9 @@
+# hugo
+resources/
+
+# Node badjouras
+node_modules/
+.npm.log
+
+# mac
+.DS_Store

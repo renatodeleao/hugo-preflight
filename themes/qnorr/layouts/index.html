@@ -1,0 +1,59 @@
+{{ define "main" }}
+<article>
+  <header>
+    <h1>Homepage Title: {{ .Title }}</h1>
+
+    <p>Kind: {{.Kind}}</p>
+    <p>Random: {{ printf "%v" .Site.Params.Test }}</p>
+    <time><strong>Created:</strong> {{.Date}}</time> |
+    <span><strong>Reading Time:</strong> {{.ReadingTime}} min</span>
+  </header>
+  <hr />
+  <p><small><em>Note: The content bellow comes from <code>/content/_index.md</code></em></small></p>
+  {{.Content}}
+
+  {{- partial "home/test.html" (dict "context" . "test" "test variable value") }}
+
+  <hr />
+  {{ range first 2 .Params.Array }}
+    {{ if eq . "omg"}}
+      <em>OMG: {{.}}</em>
+    {{ else }}
+       <b>{{.}}</b>
+    {{ end }}
+  {{ end }}
+  <hr />
+
+  <ul>
+  <!-- doc for math function cannot be find with add -->
+  <!-- first functions must be on the right side of assignment -->
+  {{ range $i, $my_var := first 2 .Params.Array }}
+    <li>{{ add $i 1}}: {{$my_var}}</li>
+  {{ end }}
+  </ul>
+
+  <ul>
+  <!--Key value (no insp) -->
+  {{ range $el_key, $el_val := .Params.CustomMap }}
+    <li>{{ $el_key }} : {{ $el_val }}</li>
+  {{ end }}
+  </ul>
+
+  <br />
+  {{ delimit .Params.Array ", " }}\
+
+  <hr />
+  <section id="pages">
+    <div class="o-grid">
+      <h2>All pages</h2>
+      <p> https://gohugo.io/templates/lists/#filter-and-limiting-lists </p>
+      <ul>
+      {{ range (where .Pages "Section" "portfolio" )  }}
+        {{/* The context, ".", is now each one of the pages as it goes through the loop */}}
+        <li><a href="{{ .URL}}">{{ .Title}}</a></li>
+      {{ end }}
+      </ul>
+    </div>
+  </section>
+</article>
+{{ end }}

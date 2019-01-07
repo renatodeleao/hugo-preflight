@@ -1,0 +1,18 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Hugo preflight demo"
+theme = "qnorr"
+sectionPagesMenu = "main"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    identifier = "home"
+    url = "/"
+    weight = 10
+
+[params]
+  test = "testing global"
+
+[permalinks]
+  # blog = "/:year/:month/:slug/"
