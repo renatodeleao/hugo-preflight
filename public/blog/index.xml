@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on Hugo preflight demo</title>
-    <link>http://example.org/blog/</link>
+    <link>https://hardcore-dubinsky-5db000.netlify.com/blog/</link>
     <description>Recent content in Blog on Hugo preflight demo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 07 Jan 2019 12:29:49 +0000</lastBuildDate>
     
-	<atom:link href="http://example.org/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://hardcore-dubinsky-5db000.netlify.com/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Last One</title>
-      <link>http://example.org/blog/last-one/</link>
+      <link>https://hardcore-dubinsky-5db000.netlify.com/blog/last-one/</link>
       <pubDate>Mon, 07 Jan 2019 12:43:09 +0000</pubDate>
       
-      <guid>http://example.org/blog/last-one/</guid>
+      <guid>https://hardcore-dubinsky-5db000.netlify.com/blog/last-one/</guid>
       <description>A new blog post</description>
     </item>
     
     <item>
       <title>Another Post</title>
-      <link>http://example.org/blog/another-post-slug-changed/</link>
+      <link>https://hardcore-dubinsky-5db000.netlify.com/blog/another-post-slug-changed/</link>
       <pubDate>Mon, 07 Jan 2019 11:59:49 +0000</pubDate>
       
-      <guid>http://example.org/blog/another-post-slug-changed/</guid>
+      <guid>https://hardcore-dubinsky-5db000.netlify.com/blog/another-post-slug-changed/</guid>
       <description>AI YEAAAAH</description>
     </item>
     
     <item>
       <title>My First Post</title>
-      <link>http://example.org/blog/my-first-post/</link>
+      <link>https://hardcore-dubinsky-5db000.netlify.com/blog/my-first-post/</link>
       <pubDate>Sat, 05 Jan 2019 21:41:20 +0000</pubDate>
       
-      <guid>http://example.org/blog/my-first-post/</guid>
+      <guid>https://hardcore-dubinsky-5db000.netlify.com/blog/my-first-post/</guid>
       <description>&lt;p&gt;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, quo in, amet nisi totam placeat beatae ipsam exercitationem labore nemo dolorem consequatur accusamus voluptatem cum vel architecto accusantium sunt porro non earum possimus unde aperiam recusandae!&lt;/p&gt;</description>
     </item>
     
