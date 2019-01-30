@@ -1,0 +1,20 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+
+# This line should *not* be indented
+publish_mode: editorial_workflow
+
+media_folder: "static/images/uploads" # Folder where user uploaded files should go
+public_folder: "/images/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "site/content/blog"
+    create: true # Allow users to create new documents in this collection
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "string", default: "Write the title"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
