@@ -1,4 +1,6 @@
 # hugo
+public/
+
 # Node badjouras
 node_modules/
 .npm.log
