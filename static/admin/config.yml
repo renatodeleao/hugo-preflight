@@ -11,8 +11,9 @@ public_folder: "/images/uploads"
 collections:
   - name: "blog"
     label: "Blog"
-    folder: "site/content/blog"
+    folder: "content/blog"
     create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g.,
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Title", name: "title", widget: "string", default: "Write the title"}

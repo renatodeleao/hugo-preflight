@@ -5,7 +5,7 @@ Messing around with "world’s fastest framework for building websites"
 - In a section (folder), when an `_index.md` will turn into a list page default. `index.md` (no underscore) will turn into a default single.
 - Cache and livereload sometimes is weird. If your suspecting some weird behaviour, for sanity check restart the server and empty your browser cache.
 - That "lazy blogger menu" becomes weird with all the subsections customizations. maybe i'm doing something wrong, but i renders supper weird. It's better to do it by hand for now.
-- if you and "index" functionalities to subsections `content/section/subsection/_index.md`. Those section pages are excluded from `{{ range .Pages}}` scope on the parent section. I believe this is intened, Buut you always have `.Site
+- if you Want "index" functionalities to subsections `content/section/subsection/_index.md`. Those section pages are excluded from `{{ range .Pages}}` scope on the parent section. I believe this is intened, Buut you always have `.Site
 
 ## Mind-blowing discoveries
 - Sub-section layout overrides via `type` + `layout`, that points to a `layouts/<type>/<layout>.html`. This is freaking amazing.
