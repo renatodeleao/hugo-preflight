@@ -1,10 +1,29 @@
 {{define "main"}}
-  custom blog list
+  Custom blog page layout using layout/blog/list.html
 
-  {{ .Content}}
+  {{.Title}}
 
+  {{ .Content }}
+
+  <h2>Default .Pages loop (if you have _index.md in sub-folders those pages won't appear</h2>
   {{ range .Pages }}
     {{/* The context, ".", is now each one of the pages as it goes through the loop */}}
-    <h2><a href="{{ .URL}}">{{ .Title}}</a></h2>
+    <h3><a href="{{ .URL}}">{{ .Title}}</a></h3>
   {{ end }}
-{{end }}
+
+  <h2>All .Blog .Pages</h2>
+  {{ range (where .Site.RegularPages "Section" "blog") }}
+    {{/* The context, ".", is now each one of the pages as it goes through the loop */}}
+    <h3><a href="{{ .URL}}">{{ .Title}}</a></h3>
+  {{ end }}
+
+  <h2>Default .Sections loop (If exists sub sections)</h2>
+  {{- if .Sections -}}
+    {{- range .Sections -}}
+      <h3>{{ .Title}} Posts <a href="{{ .URL}}">Go to lab</a></h3>
+      {{- range $i, $e := .Data.Pages -}}
+        <h4><a href="{{ .URL}}">Subsection pagePage title:{{ .Title}}</a></h4>
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{ end}}

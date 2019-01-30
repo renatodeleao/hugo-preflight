@@ -1,7 +1,9 @@
 {{define "main"}}
+  {{.Content}}
+
   {{ range .Pages }}
   {{/* The context, ".", is now each one of the pages as it goes through the loop */}}
-    <h1>Portolio index</h1>
+    <h1>Work custom list template</h1>
     <h2><a href="{{ .URL}}">{{ .Title}}</a></h2>
   {{ end }}
 {{end }}

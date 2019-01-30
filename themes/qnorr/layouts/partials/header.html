@@ -1,19 +1,19 @@
-<header role="banner" class="c-hero">
+<header role="banner" class="c-hero" style="background-image: url()">
   <div class="o-wrap">
     <h1>{{.Site.Title}} | type: {{.Type }} | kind: {{ .Kind}}</h1>
 
     <nav class="c-masthead">
       <ul class="c-masthead__menu" role="menu">
         {{ $currentPage := . }}
-        {{ range .Site.Menus.main }}
 
-        <li class="c-masthead__menu-item">
-          <a
-            class='c-masthead__menu-anchor {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}is-active{{end}}'
-            href="{{ .URL }}"
-            title="{{ .Title }}"
-          >{{ .Name }}</a>
-        </li>
+        {{ range .Site.Menus.main }}
+          <li class="c-masthead__menu-item">
+            <a
+              class='c-masthead__menu-anchor {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}is-active{{end}}'
+              href="{{ .URL }}"
+              title="{{ .Title }}"
+            >{{ .Name }}</a>
+          </li>
         {{ end }}
       </ul>
     </nav>
@@ -24,8 +24,6 @@
     {{ define "breadcrumbnav" }}
       {{ if .p1.Parent }}
         {{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 )  }}
-      {{ else if not .p1.IsHome }}
-        {{ template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 )  }}
       {{ end }}
       <li  class='c-breadcrumb__item {{ if eq .p1 .p2 }}is-active{{ end }}'>
         <a class="c-breadcrumb__anchor" href="{{ .p1.Permalink }}">{{ .p1.Title }}</a>

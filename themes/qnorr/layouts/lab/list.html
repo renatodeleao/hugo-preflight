@@ -1,0 +1,13 @@
+{{define "main"}}
+
+  <header class="c-hero c-hero--nested">
+    This blog section is sponsored by: custom layout overrides by "type" + "layout" in frontmatter. Thanks hugo.
+  </header>
+
+  {{ .Content}}
+
+  {{ range .Pages }}
+    {{/* The context, ".", is now each one of the pages as it goes through the loop */}}
+    <h2><a href="{{ .URL}}">{{ .Title}}</a></h2>
+  {{ end }}
+{{end }}

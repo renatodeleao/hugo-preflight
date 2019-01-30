@@ -45,14 +45,27 @@
   <hr />
   <section id="pages">
     <div class="o-grid">
-      <h2>All pages</h2>
-      <p> https://gohugo.io/templates/lists/#filter-and-limiting-lists </p>
-      <ul>
-      {{ range (where .Pages "Section" "portfolio" )  }}
-        {{/* The context, ".", is now each one of the pages as it goes through the loop */}}
-        <li><a href="{{ .URL}}">{{ .Title}}</a></li>
-      {{ end }}
-      </ul>
+      <div class="o-gird__el">
+        <h2>All pages</h2>
+        <p> https://gohugo.io/templates/lists/#filter-and-limiting-lists </p>
+        <ul>
+        {{ range .Pages }}
+          {{/* The context, ".", is now each one of the pages as it goes through the loop */}}
+          <li><a href="{{ .URL}}">{{ .Title}}</a></li>
+        {{ end }}
+        </ul>
+      </div>
+
+      <div class="o-gird__el">
+          <h2>portfolio pages</h2>
+          <p> https://gohugo.io/templates/lists/#filter-and-limiting-lists </p>
+          <ul>
+          {{ range (where .Pages "Section" "work" )  }}
+            {{/* The context, ".", is now each one of the pages as it goes through the loop */}}
+            <li><a href="{{ .URL}}">{{ .Title}}</a></li>
+          {{ end }}
+          </ul>
+        </div>
     </div>
   </section>
 </article>
